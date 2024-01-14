@@ -1,5 +1,4 @@
 <!doctype html>
-{% load django_bootstrap5 %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,12 +10,12 @@
 <body>
 
 <div class="container pt-5" style="max-width:400px">
-    <form action="/url/to/submit/" method="post" class="form">
+    <form method="post">
         {% csrf_token %}
-
-        {% bootstrap_form form %}
-
-        {% bootstrap_button button_type="submit" content="Submit" %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
     </form>
 </div>
 

@@ -1,8 +1,7 @@
 from django.db import models
 
 
-class NewStats(models.Model):
-    objects = None
+class newstats(models.Model):
     win = models.IntegerField()
     mac = models.IntegerField()
     iph = models.IntegerField()
